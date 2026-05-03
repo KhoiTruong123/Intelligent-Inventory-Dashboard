@@ -3,7 +3,7 @@
     <!-- filter board for application -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 justify-between bg-slate-100 p-6 rounded-2xl gap-2">
       <label class="flex flex-col gap-2 w-full md:w-auto">
-        <span class="text-xs font-bold text-gray-600 uppercase tracking-wider">Search Vehicle</span>
+        <span class="text-xs font-bold text-gray-600 uppercase tracking-wider">Search model</span>
         <input
           v-model="filters.model"
           placeholder="Search Vehicle (VIN, Model...)"
@@ -11,7 +11,7 @@
         />
       </label>
       <label class="flex flex-col gap-2 relative group min-w-[160px] w-full md:w-auto">
-        <span class="text-xs font-bold text-gray-600 uppercase tracking-wider">Select company</span>
+        <span class="text-xs font-bold text-gray-600 uppercase tracking-wider">Select make</span>
         <select
           class="pl-4 h-12 pr-4 py-2.5 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-200 focus:border-blue-400 transition appearance-none"
           v-model="filters.make"
@@ -220,12 +220,4 @@ const clearFilters = () => {
   };
   filteredVehicles.value = vehicleStore.vehicles; // Hiển thị tất cả xe khi xóa bộ lọc
 };
-
-// Hàm xử lý khi click (Optional: nếu bạn muốn log lại hành động của user)
-// const toggleAgingFilter = () => {
-//   showAgingOnly.value = !showAgingOnly.value;
-//   filteredVehicles.value = showAgingOnly.value
-//     ? filterVehicles(vehicleStore.vehicles, { ...filters.value, age: "90+" })
-//     : filterVehicles(vehicleStore.vehicles, filters.value);
-// };
 </script>
