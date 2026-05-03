@@ -218,6 +218,6 @@ const clearFilters = () => {
     status: "",
     age: "",
   };
-  filteredVehicles.value = vehicleStore.vehicles; // Hiển thị tất cả xe khi xóa bộ lọc
+  filteredVehicles.value = vehicleStore.vehicles;
 };
 </script>
