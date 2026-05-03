@@ -1,5 +1,5 @@
 <template>
-  <div class="flex gap-10 items-center p-4 bg-gray-800 text-white">
+  <div class="flex flex-col md:flex-row gap-4 items-center p-4 bg-gray-800 text-white ">
     <div class="flex divide-x gap-2">
       <div class="flex gap-2 items-center">
         <div class="h-8 w-8 bg-blue-500 rounded-lg flex items-center justify-center text-white font-black italic shadow-lg">K</div>

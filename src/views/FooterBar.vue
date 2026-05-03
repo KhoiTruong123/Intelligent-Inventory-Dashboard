@@ -43,7 +43,7 @@
         </div>
       </div>
 
-      <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <!-- <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
         <p class="text-xs text-gray-500 font-medium">
           &copy; 2026 Keyloop Drive Inventory Management System. All rights reserved.
         </p>
@@ -51,7 +51,7 @@
           <a href="#" class="text-xs text-gray-500 hover:text-white font-bold uppercase tracking-widest transition-colors">Privacy Policy</a>
           <a href="#" class="text-xs text-gray-500 hover:text-white font-bold uppercase tracking-widest transition-colors">Terms of Service</a>
         </div>
-      </div>
+      </div> -->
     </div>
   </footer>
 </template>

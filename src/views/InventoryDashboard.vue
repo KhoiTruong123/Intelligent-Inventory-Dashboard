@@ -1,7 +1,8 @@
 <template>
   <div class="p-20 flex gap-4 flex-col">
-    <div class="flex justify-between bg-slate-100 p-6 rounded-2xl">
-      <label class="flex flex-col gap-2">
+    <!-- filter board for application -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 justify-between bg-slate-100 p-6 rounded-2xl gap-2">
+      <label class="flex flex-col gap-2 w-full md:w-auto">
         <span class="text-xs font-bold text-gray-600 uppercase tracking-wider">Search Vehicle</span>
         <input
           v-model="filters.model"
@@ -9,7 +10,7 @@
           class="w-full h-12 pl-4 pr-4 py-2.5 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-200 focus:border-blue-400 transition"
         />
       </label>
-      <label class="flex flex-col gap-2 relative group min-w-[160px]">
+      <label class="flex flex-col gap-2 relative group min-w-[160px] w-full md:w-auto">
         <span class="text-xs font-bold text-gray-600 uppercase tracking-wider">Select company</span>
         <select
           class="pl-4 h-12 pr-4 py-2.5 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-200 focus:border-blue-400 transition appearance-none"
@@ -38,7 +39,7 @@
           </svg>
         </div>
       </label>
-      <label class="flex flex-col gap-2 relative group min-w-[160px]">
+      <label class="flex flex-col gap-2 relative group min-w-[160px] w-full md:w-auto">
         <span class="text-xs font-bold text-gray-600 uppercase tracking-wider">Select status</span>
         <select
           v-model="filters.status"
@@ -68,7 +69,7 @@
         </div>
       </label>
       <!-- select age of vehicle -->
-      <label class="flex flex-col gap-2 relative">
+      <label class="flex flex-col gap-2 relative w-full md:w-auto">
         <span class="text-xs font-bold text-gray-600 uppercase tracking-wider">Select age</span>
         <select
           class="pl-4 h-12 appearance-none pr-4 py-2.5 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-200 focus:border-blue-400 transition"
@@ -99,28 +100,6 @@
           </svg>
         </div>
       </label>
-      <!-- <div class="flex flex-col p-2 px-4 gap-2">
-        <span class="text-xs font-bold text-gray-600 uppercase tracking-wider">
-          Aging stock
-        </span>
-
-        <div class="text-center flex gap-2">
-          <button
-            type="button"
-            @click="toggleAgingFilter"
-            :class="showAgingOnly ? 'bg-red-500' : 'bg-gray-300'"
-            class="relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-red-200 focus:ring-offset-2"
-          >
-            <span
-              :class="showAgingOnly ? 'translate-x-6' : 'translate-x-1'"
-              class="inline-block h-4 w-4 transform rounded-full bg-white transition-transform duration-300 ease-in-out shadow-md"
-            ></span>
-          </button>
-          <div class="text-sm text-gray-500 flex items-center">
-            Toggle Switch
-          </div>
-        </div>
-      </div> -->
       <div class="grid grid-col gap-2">
         <button
           @click="applyFilters"
@@ -164,6 +143,7 @@
         </button>
       </div>
     </div>
+    <!-- list of vehicles -->
     <div class="">
       <VehicleList :vehicles="filteredVehicles" @log-action="logAction" />
     </div>
